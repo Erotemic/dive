@@ -100,6 +100,10 @@ const listFileTypes = [
   'txt',
 ];
 
+const zipFileTypes = [
+  'zip',
+];
+
 const stereoPipelineMarker = 'measurement';
 const multiCamPipelineMarker = ''; //Placeholder
 
@@ -121,6 +125,7 @@ export {
   inputAnnotationTypes,
   inputAnnotationFileTypes,
   listFileTypes,
+  zipFileTypes,
   stereoPipelineMarker,
   multiCamPipelineMarker,
 };
