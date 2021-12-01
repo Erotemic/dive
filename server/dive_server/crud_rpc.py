@@ -382,10 +382,7 @@ def postprocess(
         # extract ZIP Files if not already completed
         zipItems = Folder().childItems(
             dsFolder,
-            filters={
-                "lowerName": {"$regex": constants.zipRegex},
-                f"meta.{constants.ZipFileExtractedMarker}": {'$exists': False},
-            },
+            filters={"lowerName": {"$regex": constants.zipRegex}},
         )
         for item in zipItems:
             newjob = tasks.extract_zip.apply_async(
